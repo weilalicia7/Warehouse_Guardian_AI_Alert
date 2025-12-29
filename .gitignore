@@ -66,6 +66,11 @@ business-guardian-key.json
 *.json.key
 service-account*.json
 
+# API keys and secrets
+api-key-*.txt
+*-key.txt
+*.secret
+
 # Misc
 .cache/
 *.bak
