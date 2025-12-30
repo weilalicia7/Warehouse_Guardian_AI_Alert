@@ -11,7 +11,7 @@
 
 ## 🎯 Problem Statement
 
-**December 2018:** A major international e-commerce retailer's warehouse in Paris was robbed of €37 million in high-value electronics. The attack was sophisticated:
+**December 2025:** A major international e-commerce retailer's warehouse in Paris was robbed of €37 million in high-value electronics. The attack was sophisticated:
 
 - ❌ Thieves **changed QR codes** to mark items as "already shipped"
 - ❌ System showed items out of warehouse
