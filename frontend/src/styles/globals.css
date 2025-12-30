@@ -1,6 +1,6 @@
 /**
  * Business Guardian AI - Global Styles
- * JD.com-inspired color theme
+ * Cybersecurity-themed color palette
  */
 
 @tailwind base;
@@ -9,7 +9,7 @@
 
 /* CSS Variables */
 :root {
-  /* Primary Colors - JD.com Red */
+  /* Primary Colors - Cybersecurity Red Accent */
   --color-primary: #E4393C;
   --color-primary-light: #FF6B6E;
   --color-primary-dark: #C41D1D;

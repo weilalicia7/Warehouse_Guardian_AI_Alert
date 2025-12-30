@@ -1,0 +1,28 @@
+{
+  "short_name": "Guardian AI",
+  "name": "Business Guardian AI - Warehouse Security",
+  "description": "Real-time warehouse security and fraud detection platform powered by AI",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#E4393C",
+  "background_color": "#0a0a0a",
+  "orientation": "portrait-primary",
+  "categories": ["business", "security", "productivity"]
+}

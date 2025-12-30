@@ -1,6 +1,6 @@
 """
 Business Guardian AI - End-to-End Demo
-Runs complete fraud detection pipeline and simulates JD.com attack
+Runs complete fraud detection pipeline and simulates warehouse fraud attack
 """
 
 import subprocess
@@ -48,12 +48,12 @@ def main():
 
     print("""
 This demo will:
-1. Generate QR code scan events (legitimate + JD.com attack)
+1. Generate QR code scan events (legitimate + warehouse fraud attack)
 2. Simulate IoT sensor data (weight sensors detect theft)
 3. Create digital inventory events (fraudulent transactions)
 4. Show fraud detection in action
 
-The JD.com attack will be detected through:
+The warehouse fraud attack will be detected through:
 - Invalid QR code signatures
 - Weight sensor anomalies (missing items)
 - Physical-digital inventory mismatch
@@ -69,7 +69,7 @@ The JD.com attack will be detected through:
         {
             'name': 'QR Code Scan Events',
             'path': os.path.join(base_path, 'backend', 'confluent', 'producers', 'qr_scan_producer.py'),
-            'description': 'Generating legitimate scans and JD.com attack (tampered QR codes)...'
+            'description': 'Generating legitimate scans and warehouse fraud attack (tampered QR codes)...'
         },
         {
             'name': 'IoT Sensor Events',
@@ -120,8 +120,8 @@ Topic: inventory-digital
 - CRITICAL: Fraudulent transactions detected
 - Items falsely marked as "shipped"
 
-JD.COM ATTACK DETECTED:
-=======================
+WAREHOUSE FRAUD ATTACK DETECTED:
+================================
 ✅ QR code tampering: Signature mismatch
 ✅ Physical theft: 49 items missing
 ✅ Digital fraud: Fake "shipped" records

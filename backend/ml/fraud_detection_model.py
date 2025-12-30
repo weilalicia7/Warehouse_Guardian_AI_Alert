@@ -103,7 +103,7 @@ class FraudDataGenerator:
         )
 
     def generate_fraud_sample(self) -> FraudFeatures:
-        """Generate a fraudulent sample (JD.com attack pattern)"""
+        """Generate a fraudulent sample (warehouse fraud attack pattern)"""
         fraud_type = np.random.choice(['qr_tampering', 'inventory_theft', 'insider'])
 
         if fraud_type == 'qr_tampering':
@@ -403,7 +403,7 @@ def main():
     print(f"  Prediction: {'FRAUD' if pred == 1 else 'LEGITIMATE'}")
     print(f"  Fraud probability: {prob:.2%}")
 
-    # Test case 2: JD.com attack
+    # Test case 2: Warehouse fraud attack
     test_fraud = {
         'qr_signature_valid': 0,  # TAMPERED!
         'qr_age_hours': 2.0,
@@ -428,7 +428,7 @@ def main():
     }
 
     pred, prob = model.predict(test_fraud)
-    print(f"\n[TEST 2] JD.com Attack Scenario")
+    print(f"\n[TEST 2] Warehouse Fraud Attack Scenario")
     print(f"  Prediction: {'FRAUD' if pred == 1 else 'LEGITIMATE'}")
     print(f"  Fraud probability: {prob:.2%}")
 

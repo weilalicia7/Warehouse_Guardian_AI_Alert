@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Primary - JD.com Red
+        // Primary - Cybersecurity Red Accent
         primary: {
           DEFAULT: '#E4393C',
           50: '#FEF2F2',
@@ -96,6 +96,20 @@ module.exports = {
           dark: '#1A1A1A',
         },
 
+        // Cybersecurity Neon Colors
+        neon: {
+          cyan: '#00d4ff',
+          green: '#00ff88',
+          orange: '#ff9500',
+          red: '#E4393C',
+        },
+
+        // Dark Backgrounds
+        dark: {
+          bg: '#0a0a0a',
+          warehouse: '#1a1410',
+        },
+
         // Chart Colors
         chart: {
           red: '#E4393C',
@@ -121,8 +135,10 @@ module.exports = {
 
       // Font Family
       fontFamily: {
+        display: ['Orbitron', 'sans-serif'],
+        body: ['Rajdhani', 'sans-serif'],
+        mono: ['Share Tech Mono', 'monospace'],
         sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
-        mono: ['Monaco', 'Consolas', '"Courier New"', 'monospace'],
       },
 
       // Font Size

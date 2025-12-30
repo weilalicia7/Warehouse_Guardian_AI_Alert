@@ -1,0 +1,97 @@
+/**
+ * Global Styles and Tailwind CSS
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========================================
+ * BASE STYLES
+ * ======================================== */
+
+@layer base {
+  * {
+    @apply border-gray-700;
+  }
+
+  body {
+    @apply bg-dark-bg text-gray-100 font-body;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+
+  code,
+  pre {
+    @apply font-mono;
+  }
+}
+
+/* ========================================
+ * CUSTOM COMPONENTS
+ * ======================================== */
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-primary text-white font-bold rounded-lg transition-all duration-300;
+    @apply hover:bg-red-600 hover:shadow-[0_0_20px_rgba(228,57,60,0.5)];
+    @apply active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-transparent border-2 border-primary text-primary font-bold rounded-lg transition-all duration-300;
+    @apply hover:bg-primary hover:text-white hover:shadow-[0_0_20px_rgba(228,57,60,0.5)];
+    @apply active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply px-6 py-3 bg-transparent text-gray-300 font-semibold rounded-lg transition-all duration-300;
+    @apply hover:bg-white/10 hover:text-white;
+    @apply active:scale-95;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-dark-warehouse border border-gray-700 rounded-lg;
+    @apply text-white placeholder-gray-500 font-body;
+    @apply focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30;
+    @apply transition-all duration-300;
+  }
+
+  .card {
+    @apply bg-dark-warehouse border border-gray-800 rounded-lg p-6;
+    @apply shadow-lg;
+  }
+
+  .card-hover {
+    @apply card transition-all duration-300;
+    @apply hover:border-primary/50 hover:shadow-[0_0_20px_rgba(228,57,60,0.2)];
+  }
+}
+
+/* ========================================
+ * UTILITY CLASSES
+ * ======================================== */
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-border {
+    position: relative;
+    background: linear-gradient(#0a0a0a, #0a0a0a) padding-box,
+      linear-gradient(90deg, #e4393c, #ff9500, #00d4ff) border-box;
+    border: 2px solid transparent;
+  }
+}

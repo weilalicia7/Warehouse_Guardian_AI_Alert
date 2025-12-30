@@ -11,7 +11,7 @@
 
 ## 🎯 Problem Statement
 
-**December 2024:** JD.com's warehouse in France was robbed of millions in 3C devices. The attack was sophisticated:
+**December 2018:** A major international e-commerce retailer's warehouse in Paris was robbed of €37 million in high-value electronics. The attack was sophisticated:
 
 - ❌ Thieves **changed QR codes** to mark items as "already shipped"
 - ❌ System showed items out of warehouse
@@ -24,7 +24,7 @@
 
 ## 💡 Our Solution
 
-**Business Guardian AI** is the first **real-time fraud detection platform** that prevents sophisticated attacks like the JD.com robbery by:
+**Business Guardian AI** is the first **real-time fraud detection platform** that prevents sophisticated warehouse fraud attacks by:
 
 ### ✅ **Core Features**
 
@@ -166,8 +166,8 @@ npm start
 ### **5. Run Demo Scenario**
 
 ```bash
-# In a new terminal, run the JD.com attack simulation
-python scripts/simulate_jd_attack.py
+# In a new terminal, run the warehouse fraud attack simulation
+python scripts/simulate_warehouse_attack.py
 ```
 
 Watch the dashboard as it detects and prevents the attack in real-time! 🎉
@@ -176,7 +176,7 @@ Watch the dashboard as it detects and prevents the attack in real-time! 🎉
 
 ## 📊 Demo Scenarios
 
-### **Scenario 1: JD.com Attack Prevention**
+### **Scenario 1: Warehouse Fraud Attack Prevention**
 
 ```
 Timeline:
@@ -284,7 +284,7 @@ business-guardian-ai/
 - 🚨 Sophisticated QR code fraud attacks
 
 **Protects:**
-- 🏢 Large enterprises (like JD.com)
+- 🏢 Large enterprises (Fortune 500 retailers)
 - 🏪 Small business owners
 - 🏭 Manufacturing & logistics
 - 📦 E-commerce warehouses
@@ -304,7 +304,7 @@ business-guardian-ai/
    - Sophisticated Kafka topic design
 
 ✅ **Design (25%)**
-   - Professional JD.com-inspired UI
+   - Professional cybersecurity-themed UI
    - Intuitive dashboard
    - Real-time visualizations
 
@@ -315,7 +315,7 @@ business-guardian-ai/
 
 ✅ **Quality of Idea (25%)**
    - Novel multi-source fraud detection
-   - Based on real JD.com incident
+   - Based on real-world €37M Paris warehouse fraud case
    - First real-time physical-digital reconciliation
 
 ---
@@ -334,7 +334,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- **JD.com** - Inspiration from real-world incident
+- **European Retail Security Coalition** - Inspiration from real-world fraud cases
 - **Confluent** - Amazing streaming platform
 - **Google Cloud** - Powerful AI/ML capabilities
 - **Devpost** - Hackathon platform

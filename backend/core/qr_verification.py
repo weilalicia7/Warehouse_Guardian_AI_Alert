@@ -1,6 +1,6 @@
 """
 Business Guardian AI - QR Code Cryptographic Verification System
-Prevents JD.com-style attacks where thieves modify QR codes to bypass security
+Prevents sophisticated warehouse fraud attacks where thieves modify QR codes to bypass security
 
 This module implements:
 1. Tamper-proof QR code generation with HMAC-SHA256
@@ -64,7 +64,7 @@ class QRCodeVerifier:
     """
     Cryptographic QR Code Verification System
 
-    Prevents attacks like the JD.com warehouse robbery where
+    Prevents attacks like the €37M Paris warehouse fraud where
     thieves changed QR codes to mark items as 'shipped'
     """
 
@@ -184,17 +184,17 @@ class QRCodeVerifier:
             if threat_level == 'none':
                 threat_level = 'medium'
 
-        # 3. Detect JD.com-style attack: Status manipulation
+        # 3. Detect warehouse fraud attack: Status manipulation
         if qr_data.status == 'shipped' and expected_status != 'shipped':
             fraud_indicators.append({
                 'type': 'status_manipulation',
                 'severity': 'critical',
-                'description': 'Product marked as SHIPPED but should not be - JD.com attack pattern detected!',
+                'description': 'Product marked as SHIPPED but should not be - warehouse fraud attack pattern detected!',
                 'attack_type': 'qr_code_substitution'
             })
             threat_level = 'critical'
             is_valid = False
-            reason = 'JD.COM ATTACK DETECTED - Product falsely marked as shipped!'
+            reason = 'FRAUD ATTACK DETECTED - Product falsely marked as shipped!'
 
         # 4. Location verification
         if scan_location == 'exit_gate' and qr_data.status == 'in_warehouse':
@@ -364,8 +364,8 @@ if __name__ == '__main__':
     print(f"    Reason: {result1.reason}")
     print()
 
-    # Test 2: Simulate JD.com attack - attacker changes status to 'shipped'
-    print("[TEST 2] Simulating JD.com attack - changing status to 'shipped'...")
+    # Test 2: Simulate warehouse fraud attack - attacker changes status to 'shipped'
+    print("[TEST 2] Simulating warehouse fraud attack - changing status to 'shipped'...")
     fake_qr = QRCodeData(
         qr_id=legit_qr.qr_id,
         product=legit_qr.product,
@@ -395,4 +395,4 @@ if __name__ == '__main__':
 
     print("=" * 70)
     print("[SUCCESS] QR Code verification system is working!")
-    print("[i] This system prevents JD.com-style attacks by detecting tampering")
+    print("[i] This system prevents sophisticated warehouse fraud attacks by detecting tampering")

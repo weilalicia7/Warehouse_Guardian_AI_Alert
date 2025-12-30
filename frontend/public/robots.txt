@@ -1,0 +1,15 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow: /dashboard
+Disallow: /settings
+Disallow: /analytics
+Disallow: /api/
+
+# Allow public pages
+Allow: /
+Allow: /login
+Allow: /register
+Allow: /pricing
+
+# Sitemap
+Sitemap: https://businessguardianai.com/sitemap.xml

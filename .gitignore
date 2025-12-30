@@ -78,3 +78,25 @@ api-key-*.txt
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Documentation (exclude all except README.md)
+*.pdf
+*.md
+!README.md
+
+# Claude Code
+.claude/
+claude_tasks/
+
+# Exclude non-essential files
+UPDATES_2025.md
+PROJECT_STATUS.md
+ROADMAP.md
+TESTING_SUMMARY.md
+IMPLEMENTATION_COMPLETE.md
+SETUP_GUIDE.md
+*.backup
+*.old
+
+# Exclude large demo files (optional - keep demo.html)
+# docs/demo.html

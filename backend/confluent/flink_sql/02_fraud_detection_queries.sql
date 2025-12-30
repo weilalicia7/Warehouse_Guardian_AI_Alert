@@ -1,6 +1,6 @@
 -- Business Guardian AI - Real-Time Fraud Detection Queries
 -- These queries correlate QR scans, physical sensors, and digital inventory
--- to detect JD.com-style warehouse attacks
+-- to detect sophisticated warehouse fraud attacks
 
 -- ==================================================
 -- QUERY 1: Detect Invalid QR Code Scans
@@ -48,7 +48,7 @@ AND alert = TRUE;
 -- QUERY 2: Physical-Digital Inventory Discrepancy Detection
 -- ==================================================
 -- Detect when physical sensors show missing items but digital
--- records claim they were shipped (JD.com attack pattern!)
+-- records claim they were shipped (warehouse fraud attack pattern!)
 
 INSERT INTO fraud_alerts
 SELECT
@@ -70,7 +70,7 @@ SELECT
         CONCAT('Items missing: ', CAST(phys.expected_items_count - phys.detected_items_count AS STRING)),
         CONCAT('Weight drop: ', CAST(phys.delta_kg AS STRING), ' kg'),
         CONCAT('Digital inventory: ', CAST(dig.quantity_on_hand AS STRING), ' units'),
-        'ATTACK PATTERN: Matches JD.com warehouse robbery scenario'
+        'ATTACK PATTERN: Matches €37M Paris warehouse fraud scenario'
     ] AS evidence,
     98.0 AS threat_score,  -- Highest priority alert
     phys.timestamp AS timestamp_detected,
@@ -124,7 +124,7 @@ OR (notes LIKE '%FRAUDULENT%' OR notes LIKE '%SUSPICIOUS%');
 -- QUERY 4: Exit Gate Alert - Invalid QR at Exit
 -- ==================================================
 -- Critical alert when invalid QR code is scanned at warehouse exit
--- This is the final checkpoint where JD.com attack must be stopped!
+-- This is the final checkpoint where warehouse fraud attacks must be stopped!
 
 INSERT INTO fraud_alerts
 SELECT

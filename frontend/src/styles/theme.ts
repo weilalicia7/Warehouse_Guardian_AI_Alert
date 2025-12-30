@@ -1,12 +1,12 @@
 /**
- * Business Guardian AI - JD.com Inspired Color Theme
- * Based on JD.com's brand colors and e-commerce aesthetics
+ * Business Guardian AI - Cybersecurity Color Theme
+ * Professional cybersecurity and fraud detection aesthetics
  */
 
 export const theme = {
-  // Primary Brand Colors (JD.com Red)
+  // Primary Brand Colors (Alert Red)
   primary: {
-    main: '#E4393C',      // JD Red - Primary brand color
+    main: '#E4393C',      // Alert Red - Primary brand color
     light: '#FF6B6E',     // Lighter red for hovers
     dark: '#C41D1D',      // Darker red for pressed states
     contrast: '#FFFFFF',  // White text on red

@@ -1,0 +1,378 @@
+/**
+ * Cybersecurity Aesthetic CSS
+ * Visual effects and styling from demo.html for commercial website
+ */
+
+/* ========================================
+ * FONT IMPORTS
+ * ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap');
+
+/* ========================================
+ * SCANLINE OVERLAY ANIMATION
+ * ======================================== */
+
+.scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  animation: scanline-move 8s linear infinite;
+}
+
+@keyframes scanline-move {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+/* ========================================
+ * GLOWING EFFECTS
+ * ======================================== */
+
+.glow-border {
+  box-shadow: 0 0 20px rgba(228, 57, 60, 0.5),
+    inset 0 0 20px rgba(228, 57, 60, 0.1);
+  border: 1px solid rgba(228, 57, 60, 0.8);
+}
+
+.glow-border-cyan {
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5),
+    inset 0 0 20px rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.8);
+}
+
+.glow-border-green {
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.5),
+    inset 0 0 20px rgba(0, 255, 136, 0.1);
+  border: 1px solid rgba(0, 255, 136, 0.8);
+}
+
+.neon-text {
+  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor,
+    0 0 30px currentColor;
+}
+
+.neon-text-red {
+  color: #e4393c;
+  text-shadow: 0 0 10px #e4393c, 0 0 20px #e4393c, 0 0 30px #e4393c,
+    0 0 40px #e4393c;
+}
+
+.neon-text-cyan {
+  color: #00d4ff;
+  text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff;
+}
+
+.neon-text-green {
+  color: #00ff88;
+  text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 30px #00ff88;
+}
+
+/* ========================================
+ * HUD ELEMENTS
+ * ======================================== */
+
+.hud-container {
+  font-family: 'Share Tech Mono', monospace;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #00ff88;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+  padding: 0.5rem 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.hud-corner {
+  position: relative;
+}
+
+.hud-corner::before,
+.hud-corner::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #00ff88;
+}
+
+.hud-corner::before {
+  top: -2px;
+  left: -2px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.hud-corner::after {
+  bottom: -2px;
+  right: -2px;
+  border-left: none;
+  border-top: none;
+}
+
+/* ========================================
+ * TERMINAL STYLING
+ * ======================================== */
+
+.terminal {
+  background: rgba(0, 0, 0, 0.9);
+  color: #00ff88;
+  font-family: 'Share Tech Mono', monospace;
+  padding: 1.5rem;
+  border: 1px solid #00ff88;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+.terminal-prompt {
+  color: #00d4ff;
+  margin-right: 0.5rem;
+}
+
+.terminal-text {
+  color: #00ff88;
+  line-height: 1.6;
+}
+
+/* ========================================
+ * WAREHOUSE BACKGROUND
+ * ======================================== */
+
+.warehouse-bg {
+  background: linear-gradient(
+      180deg,
+      rgba(10, 10, 10, 0.95) 0%,
+      rgba(26, 20, 16, 0.9) 100%
+    ),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><rect fill="%23111" width="1000" height="1000"/><g fill="none" stroke="%23222" stroke-width="2"><path d="M0 500h1000M500 0v1000"/><circle cx="500" cy="500" r="200"/><circle cx="500" cy="500" r="350"/></g></svg>');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* ========================================
+ * ALERT CARDS
+ * ======================================== */
+
+.alert-card {
+  background: rgba(10, 10, 10, 0.95);
+  border: 1px solid rgba(228, 57, 60, 0.5);
+  border-left: 4px solid #e4393c;
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.alert-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(228, 57, 60, 0.1) 50%,
+    transparent 100%
+  );
+  animation: alert-shimmer 3s infinite;
+}
+
+@keyframes alert-shimmer {
+  0%,
+  100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+}
+
+.alert-card:hover {
+  border-color: rgba(228, 57, 60, 0.8);
+  box-shadow: 0 0 30px rgba(228, 57, 60, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ========================================
+ * PULSE ANIMATIONS
+ * ======================================== */
+
+.pulse-red {
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse-green {
+  animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.8);
+  }
+}
+
+/* ========================================
+ * SECURITY CAMERA EFFECT
+ * ======================================== */
+
+.camera-viewport {
+  position: relative;
+  overflow: hidden;
+}
+
+.camera-viewport::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  pointer-events: none;
+}
+
+.camera-timestamp {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-family: 'Share Tech Mono', monospace;
+  color: #00ff88;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #00ff88;
+  font-size: 0.75rem;
+  z-index: 10;
+}
+
+/* ========================================
+ * CUSTOM SCROLLBAR
+ * ======================================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+  border: 1px solid #1a1410;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e4393c;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff4a4f;
+}
+
+/* ========================================
+ * LOADING SPINNER
+ * ======================================== */
+
+.loading-spinner {
+  border: 4px solid rgba(228, 57, 60, 0.2);
+  border-top: 4px solid #e4393c;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================================
+ * GRADIENT TEXT
+ * ======================================== */
+
+.gradient-text {
+  background: linear-gradient(90deg, #e4393c 0%, #ff9500 50%, #00d4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========================================
+ * BLUR OVERLAY (for free tier restrictions)
+ * ======================================== */
+
+.blur-overlay {
+  position: relative;
+}
+
+.blur-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.blur-overlay.locked::after {
+  content: '🔒 Upgrade to Unlock';
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e4393c;
+  text-shadow: 0 0 10px #e4393c;
+  pointer-events: all;
+}

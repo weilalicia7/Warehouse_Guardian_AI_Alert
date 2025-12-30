@@ -104,7 +104,7 @@ A fraud alert has been detected. Generate a concise, professional alert descript
 {chr(10).join(['- ' + str(e) for e in alert.get('evidence', [])])}
 
 **Context:**
-This system prevents JD.com-style warehouse attacks where thieves modify QR codes and steal high-value electronics.
+This system prevents sophisticated warehouse fraud attacks where thieves modify QR codes and steal high-value electronics.
 
 **Task:**
 Generate a 2-3 sentence alert description that:
